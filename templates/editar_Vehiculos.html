@@ -1,0 +1,84 @@
+{%extends 'plantillaAdmin.html' %}
+{%block body%}
+  
+  <div class="col-md-4 offset-md-4 mt-4">
+
+
+    <div class="card card-body">
+        <div class="display-7 mt-3 mb-3 text-left ">Editar vehículo</div>
+
+    {% with mensaje = get_flashed_messages()%}
+    {% if mensaje %}
+       {% for msj in mensaje %}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>{{msj}}</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+       {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+        <form action="/update" method="POST">
+
+            <div  class = "mb-3  input-group">
+
+                <input type="text" name="txtNombre" value="{{vehiculos.2}}" placeholder="Nombre" class="form-control">
+                <input type="text" name="txtApellidos" value="{{vehiculos.3}}" placeholder="Apellidos" class="form-control">
+                
+            </div>
+
+            <div  class = "mb-3 input-group">
+
+                <input type="text" name="txtModelo" value="{{vehiculos.4}}" placeholder="Modelo auto" class="form-control">
+                <input type="number" name="txtNumlic" value="{{vehiculos.5}}" placeholder="Num. Licencia" class="form-control">
+                
+            </div>
+  
+            <div class="input-group mb-3">
+                <select class="form-select" name="txtTopcion" id="inputGroupSelect01">
+                  <option disabled>Tipo de auto</option>
+                  <option selected value="{{vehiculos.5}}">{{vehiculos.6}}</option>
+                  <option>Hatchback</option>
+                  <option>SUV</option>
+                  <option>Deportivo</option>
+                  <option>Comercial</option>
+                </select>
+                </select>
+              </div>
+
+             <div class="input-group mb-3">
+                <select class="form-select" name="txtEopcion" id="inputGroupSelect01">
+                  <option disabled>Establecimientos</option>
+                  <option selected value="{{vehiculos.6}}">{{vehiculos.7}}</option>
+                  <option>Paseo Queretaro</option>
+                  <option>Milenio 3</option>
+                  <option>Plaza Puerta la Victoria</option>
+                </select>
+              </div> 
+              
+            <div  class = "mb-3 input-group">
+
+                <input type="text" name="txtNumplacas" value="{{vehiculos.8}}" placeholder="Numero de placas" class="form-control">
+                <input type="text" name="txtColor" value="{{vehiculos.9}}" placeholder="Color del auto" class="form-control">
+                
+            </div> 
+            
+            <div class="input-group mb-3">
+                <textarea class="form-control" name="txtCaract"  placeholder="Caracteristicas del auto" aria-label="With textarea">{{vehiculos.10}}</textarea>
+              </div>
+
+            <div class="d-grid gap-5 col-6 d-md-flex mx-auto">
+            <button type="submit" class="btn btn-danger mb-4">Actualizar</button>  
+            <a href="/consultaVehiculos/{{session.id}}" class="btn btn-primary mb-4">Regresar</a>          
+            </div>
+
+            <input type="hidden" name="txtEstatus" value="{{vehiculos.10}}">
+            <input type="hidden" name="txtId" value="{{vehiculos.0}}">
+
+        </form>
+
+    </div>    
+
+</div>
+
+{%endblock%}

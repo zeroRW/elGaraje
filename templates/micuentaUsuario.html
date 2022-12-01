@@ -1,0 +1,93 @@
+{% extends 'plantilla.html'%}
+{%block body%}
+
+
+
+<div class="container w-75 bg-primary mt-5 rounded shadow">
+  <div class="row align-items-stretch">
+    <!--md mediano, lg largo, xl extralargo-->
+
+    <div class="col bg-white p-5 rounded-end">
+
+        <h2 class="fw-bold text-center pt-3 mb-5 ">TU CUENTA</h2>
+
+        {% with mensaje = get_flashed_messages()%}
+        {% if mensaje %}
+          {% for msj in mensaje %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{msj}}</strong> 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+        <!--LOGIN-->
+
+        <form class="form-signin" action="/actualizarMicuenta/{{usu.0}}" method="POST">
+           
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="text" name="Miemail" readonly class="form-control-plaintext" id="staticEmail" value="{{usu.1}}" required>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Nombre de usuario</label>
+                <div class="col-sm-10">
+                  <input type="text" name="Miname" class="form-control" id="inputPassword" value="{{usu.2}}" required>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="text" name="Mipass" class="form-control" id="inputPassword" value="{{usu.3}}" required>
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Confirmar Password</label>
+                <div class="col-sm-10">
+                  <input type="text" name="Mipass2" class="form-control" id="inputPassword" value="{{usu.4}}" required>
+                </div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-dark">Guardar cambios</button>
+              </div>
+        </form>
+        <br>
+        <h4 class="fw-bold pt-3 mb-5 ">REGISTROS</h4>
+        <form>   
+              <div class="row">
+                    <div class="col">
+
+                        <table class="table table-light">
+                          <thead>
+                            <tr>
+                              <th scope="col">Modelo del auto:</th>
+                              <th scope="col">Num de licencia:</th>
+                              <th scope="col">Tipo de auto:</th>
+                              <th scope="col">Establecimiento:</th>
+                              <th scope="col">Numero de placas:</th>
+                              <th scope="col">Color auto:</th>   
+                            </tr>
+                          </thead>
+                          <tbody>
+                              {% for ve in vehi %}
+                              <tr>
+                                  <td>{{ ve.4 }}</td>
+                                  <td>{{ ve.5 }}</td>
+                                  <td>{{ ve.6 }}</td>
+                                  <td>{{ ve.7 }}</td>
+                                  <td>{{ ve.8 }}</td>
+                                  <td>{{ ve.9 }}</td>
+                          </tr>
+                          {% endfor %}
+                        </table>
+                    </div> 
+              </div>
+        </form>
+    </div>
+  </div>
+</div> 
+
+{%endblock%}

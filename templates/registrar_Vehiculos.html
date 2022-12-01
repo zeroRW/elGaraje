@@ -1,0 +1,79 @@
+{%extends 'plantilla.html' %}
+{%block body%}
+
+  
+  <div class="col-md-4 offset-md-4 mt-4">
+
+
+    <div class="card card-body">
+        <div class="display-7 mt-3 mb-3 text-left ">Registrar vehículo</div>
+
+    {% with mensaje = get_flashed_messages()%}
+    {% if mensaje %}
+       {% for msj in mensaje %}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>{{msj}}</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+       {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+        <form action="/registrarVehiculo/{{session.id}}" method="POST">
+
+            <div  class = "mb-3  input-group">
+
+                <input type="text" name="txtNombre" value="" placeholder="Nombre" class="form-control" required>
+                <input type="text" name="txtApellidos" value="" placeholder="Apellidos" class="form-control" required>
+                
+            </div>
+
+            <div  class = "mb-3 input-group">
+
+                <input type="text" name="txtModelo" value="" placeholder="Modelo auto" class="form-control" required>
+                <input type="number" name="txtNumlic" value="" placeholder="Num. Licencia" class="form-control" required>
+                
+            </div>
+  
+            <div class="input-group mb-3">
+                <select class="form-select" name="txtTopcion" id="inputGroupSelect01">
+                  <option selected disabled>Tipo de auto</option>
+                  <option>Hatchback</option>
+                  <option>SUV</option>
+                  <option>Deportivo</option>
+                  <option>Comercial</option>
+                </select>
+              </div>
+
+             <div class="input-group mb-3">
+                <select class="form-select" name="txtEopcion" id="inputGroupSelect01">
+                  <option selected disabled>Establecimientos</option>
+                  <option>Paseo Queretaro</option>
+                  <option>Milenio 3</option>
+                  <option>Plaza Puerta la Victoria</option>
+                </select>
+              </div> 
+              
+            <div  class = "mb-3 input-group">
+
+                <input type="text" name="txtNumplacas" value="" placeholder="Numero de placas" class="form-control" required>
+                <input type="text" name="txtColor" value="" placeholder="Color del auto" class="form-control" required>
+                
+            </div> 
+            
+            <div class="input-group mb-3">
+                <textarea class="form-control" name="txtCaract" placeholder="Caracteristicas del auto" aria-label="With textarea" required></textarea>
+              </div>
+
+            <div class="d-grid gap-5 col-6 d-md-flex mx-auto">
+            <button type="submit" class="btn btn-danger mb-4">Registrar</button>  
+            <a href="/index/{{session.id}}" class="btn btn-primary float-left mb-4"> Inicio </a>        
+            </div>
+
+        </form>
+
+    </div>    
+
+</div>
+
+{%endblock%}

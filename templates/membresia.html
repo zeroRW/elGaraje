@@ -1,0 +1,94 @@
+{% extends 'plantilla.html'%}
+{%block body%}
+
+{% with mensaje = get_flashed_messages()%}
+        {% if mensaje %}
+          {% for msj in mensaje %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{msj}}</strong> 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+<div class="contenedor">
+    <div class="col-md-5 mt-3">
+        <div class="card">
+            <div class="cardbody">
+
+                <div class="padre">
+                    <h3><font color = "EE2912">Visitante</font></h3>
+                    <img src="{{url_for ('static', filename = './img/dia.jpg')}}" width="170" height="150" />
+                    <h1>Por Hora</h1>
+                    <h1>$33</h1>
+                    <a href="/insertMem/{{session.id}}/Visitante" class="btn btn-outline-danger">Adquirir Membresia</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="contenedor">
+    <div class="col-md-5 mt-3">
+        <div class="card">
+            <div class="cardbody">
+
+                <div class="padre">
+                    <h3><font color = "EE2912">NIVEL 1</font></h3>
+                    <img src="{{url_for ('static', filename = './img/semana2.jpg')}}" width="400" height="150" />
+                    <h1>Vigencia de 1 semana</h1>
+                    <h1>$2079</h1>
+                    <a href="/insertMem/{{session.id}}/nivel1" class="btn btn-outline-danger">Adquirir Membresia</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="contenedor">
+    <div class="col-md-5 mt-3">
+        <div class="card">
+            <div class="cardbody">
+
+                <div class="padre">
+                    <h3><font color = "EE2912">NIVEL 2</font></h3>
+                    <img src="{{url_for ('static', filename = './img/mes.jpg')}}" width="400" height="180" />
+                    <h1>Vigencia de 1 mes</h1>
+                    <h1>$8316</h1>
+                    <a href="/insertMem/{{session.id}}/nivel2" class="btn btn-outline-danger">Adquirir Membresia</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="contenedor">
+    <div class="col-md-5 mt-3">
+        <div class="card">
+            <div class="cardbody ">
+
+                <div class="padre">
+                    <h3><font color = "EE2912">NIVEL 3</font></h3>
+                    <img src="{{url_for ('static', filename = './img/año.jpg')}}" width="400" height="180" />
+                    <h1>Vigencia de 1 año</h1>
+                    <h1>$108,000</h1>
+                    <a href="/insertMem/{{session.id}}/nivel3" class="btn btn-outline-danger">Adquirir Membresia</a>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{%endblock%}

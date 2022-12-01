@@ -1,0 +1,139 @@
+body{
+    background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+   
+}
+
+/*Color span servicios*/
+#coloSpa span{
+    color: darkred;
+}
+
+#colorSpa1 span{
+    color: blue;
+}
+
+#colorSpa2 span{
+    color:crimson;
+}
+
+#colorSpa3 span{
+    color:darkorange;
+}
+
+#titulo h1 > span{
+    font-size: 40px;
+    font-weight: lighter;
+    color: black;
+    text-align: center;
+}
+
+/* MENU */
+/*selector de id*/
+#menu p > a{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+#menu li > a{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+#menu button{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* SLIDER DE IMAGENES */
+
+.carousel-inner{
+    max-height: 39rem;
+}
+
+/*Media queries pantalla SM*/
+
+@media (max-width:768px) {
+    #intro, #nosotros{
+        width: 90% !important;
+    }
+
+    #nosotros p{
+        display: none;
+    }
+    .servicio-fila {
+        width: 100% !important;
+        text-align: center;
+
+    }
+}
+
+/*Media queries panatalla extra-sm*/
+@media(max-width:576px) {
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+}
+
+/*Imagen de abajo*/
+footer{
+    background: black;
+    min-height: 100px;
+}
+
+footer p{
+    color: #E2E2E2;
+    text-align: center;
+}
+
+#icon i{
+    font-size: 26px;
+    padding: 0 8px;
+    color: #E2E2E2;
+}
+
+/*------------------------------------------------------------------------------------------*/
+
+/*TEMPLATE LOGIN*/
+
+#tituloLo h1{
+    text-align: center;
+}
+
+.form-control{
+    min-height: 3.125rem;
+    line-height: initial;
+}
+
+#btnColor button{
+    color: black;
+}
+
+#imagen{
+    text-align: center;
+}
+
+
+/*Templates establecimiento y membresias*/
+
+
+.padre {
+    background-color: #fafafa;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    /* IMPORTANTE */
+    text-align: center;
+  }
+
+  .contenedor {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }

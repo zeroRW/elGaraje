@@ -1,0 +1,52 @@
+{%extends 'plantillaAdmin.html' %}
+{%block body%}
+
+<div class="container">
+    <div class="card card-body">
+      {% with mensaje = get_flashed_messages() %}
+        {% if mensaje %}
+        {% for msj in mensaje %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ msj }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor  %}    
+        {% endif  %}    
+        {% endwith  %}
+
+        <div class="display-5 mb-3 text-left">Consulta de Usuarios</div>
+
+        <form method="POST">
+          Descripcion: <input type="text" name="txtcategoria">
+                <input type="submit" value="Buscar">
+              <div class="row">
+                    <div class="col">
+
+                        <table class="table table-light">
+                          <thead>
+                            <tr>
+                              <th scope="col">Nombre:</th>
+                              <th scope="col">Email:</th>
+                              <th scope="col">Password:</th>
+                              <th scope="col">Acciones:</th>                
+                            </tr>
+                          </thead>
+                          <tbody>
+                              {% for usu in usuarios %}
+                              <tr>
+                                  <th scope="row">{{ usu.1 }}</th>
+                                  <td>{{ usu.2 }}</td>
+                                  <td>{{ usu.3 }}</td>
+                                  <td><a href="/editarusu/{{ usu.0 }}" class="btn btn-secondary">Editar</a>
+                                  <a href="/elimiarusu/{{ usu.0 }}" class="btn btn-secondary">Eliminar</a></td>
+                          </tr>
+                          {% endfor %}
+                        </table>
+                    </div> 
+              </div>
+        </form>
+
+        
+</div> 
+
+{%endblock%}

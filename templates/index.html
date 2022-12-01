@@ -1,0 +1,103 @@
+{% extends 'plantilla.html'%}
+{%block body%}
+
+
+<!--SLIDER-->
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.misabogados.com/hubfs/egor-myznik-rCZQCbUAQvg-unsplash%20(1).webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://blog.zequer.com/wp-content/uploads/2018/04/empresas-de-seguridad.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://blog.artical.xyz/hubfs/poder-del-servicio-post-venta-en-una-empresa.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--INTRO-->
+<section class="w-50 mx-auto text-center pt-5" id="intro">
+  <h1 class="p-3 fs-2 border-top border-3 ">Una agencia unica que brindara los mejores servicios a tu <span class="text-primary">Automovil</span></h1>
+  <p class="p-3 fs-4"><span class="text-primary">El GARAJE.</span> Contamos con los mejores servicios para tu auto dentro de un
+  estacionamiento, brindandote seguridad.</p>
+</section>
+
+<!--SERVICIOS-->
+
+<section class="w-50 mx-auto text-center pt-5" id="titulo">
+  <h1 class="p-3 fs-2"><span>SERVICIOS</span></h1>
+</section>
+
+<section class="container-fluid">
+   <div class="row w-75 mx-auto my-5 servicios-fila">
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap" id="coloSpa">
+      <img src="https://cdn-icons-png.flaticon.com/512/1111/1111703.png" width="170" height="160" alt="establecimiento1">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1"><span>Seguridad</span></h3>
+        <p class="px-4">Tu auto estara seguro durante tu estancia en uno de nuestros Establecimientos</p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap" id="colorSpa1">
+      <img src="https://cdn-icons-png.flaticon.com/512/2890/2890529.png" width="170" height="160" alt="establecimiento1">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1"><span>Limpieza</span></h3>
+        <p class="px-4">Mantendremos tu auto limpio y que huela rico a la hora de subirte UWU</p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap" id="colorSpa2">
+      <img src="https://cdn-icons-png.flaticon.com/512/946/946871.png" width="170" height="160" alt="establecimiento1">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1"><span>VIP</span></h3>
+        <p class="px-4">Podras entrar de manera mas rapida ya con un lugar asegurado para que ahorres tiempo. Puedes checar nuestras membresias para mas informacion.</p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap" id="colorSpa3">
+      <img src="https://cdn-icons-png.flaticon.com/512/155/155263.png" width="170" height="160" alt="establecimiento1">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1"><span>Comodidad</span></h3>
+        <p class="px-4">Cercania a la hora de regresar por tu auto</p>
+      </div>
+    </div>
+   </div>
+</section>
+
+<!--Hacerca de nosotros-->
+<section>
+  <section class="w-50 mx-auto text-center pt-5" id="titulo">
+    <h1 class="p-3 fs-2"><span>¿QUIENES SOMOS?</span></h1>
+  </section>
+</section>
+<br>
+<section>
+  <div class="w-50 m-auto text-center" id="nosotros">
+    <h1 class="mb-5 fs-2">Equipo pequeño con <span class="text-primary">resultados grandes</span></h1>
+    <p class="fs-4">Siempre buscamos darle nuestro mejor servicio a nuestros clientes, te esperamos para que
+      te unas con nosotros.</p>
+      <div class="mt-5 text-center">
+        <img class="img-fluid" src="https://coworkingfy.com/wp-content/uploads/2019/11/trabajo-en-equipo-grupo-figurativo-de-equipo-de-trabajo-1024x612.jpg" alt="">
+      </div>
+  </div>
+</section>
+<br>
+<!--Pie de pagina-->
+
+<footer class="w-100 d-flex align-items justify-content-center flex-wrap">
+  <p class="fs-5 px-3 pt-3">ELGARAJE. &copy; Todos los derechos reservados 2022</p>
+  <p class="fs-5 px-3 pt-3">Telef. 442-356-7609 by.{code3AD}</p>
+  <div id="icon">
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-twitter"></i></a>
+  </div>
+</footer>
+
+{%endblock%}

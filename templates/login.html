@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  <title>LOGIN</title>
+</head>
+<body>
+ <!--Estilo CSS-->
+<style>
+
+    .bg{
+      background-image: url('/static/img/autos2.jpg');
+      background-position: center center;
+    }
+</style>
+
+<div class="container w-75 bg-primary mt-5 rounded shadow">
+  <div class="row align-items-stretch">
+    <!--md mediano, lg largo, xl extralargo-->
+    
+    <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 ">
+    </div>
+
+    <div class="col bg-white p-5 rounded-end">
+        <div class="px-lg-5 pt-lg-4 pb-lg-3 w-100 border-0" id="imagen">
+          <img src="{{url_for ('static', filename = './img/logoG.png')}}" width="150" height="90" alt="">
+        </div>
+        <h2 class="fw-bold text-center pt-3 mb-5 ">Iniciar Sesion</h2>
+
+        {% with mensaje = get_flashed_messages()%}
+        {% if mensaje %}
+          {% for msj in mensaje %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>{{msj}}</strong> 
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+        <!--LOGIN-->
+
+        <form class="form-signin" action="/login" method="POST">
+            <div class="mb-4">
+              <label for="text" class="form-label">Nombre usuario</label>
+              <input type="text" class="form-control" name="txtuser" required>
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" name="txtpassword" required>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark">Iniciar Sesion</button>
+            </div>
+            <div class="my-3">
+              <span>¿No tienes cuenta? <a href="/registrarte" class="nav-link " ><font color="blue">Resgistrate</font></a></span>
+            </div>
+
+        </form>
+
+    </div>
+  </div>
+</div> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
