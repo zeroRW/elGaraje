@@ -15,8 +15,8 @@
 <nav class="navbar navbar-expand-lg  navbar-light bg-light p-3" id="menu">
     <div class="container-fluid ">
     
-        <p class=" fst-italic mt-0 mb-0">
-          <img src="{{url_for ('static', filename = './img/logoG.png')}}" width="100" height="60" alt="">
+        <p class=" fst-italic mt-1 mb-0">
+          <img src="{{url_for ('static', filename = './img/image.png')}}" width="120" height="65" alt="">
         </p>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
         </ul>
         <form class="d-flex">
           <p class="mt-0 offset-md-1" style="color:black ;">Usuario: {{session.usuario}}</p>
-            <a href="/logout" class="nav-link" style="color:black ;">LOG OUT</a> 
+          <a href="/logout" class="nav-link" style="color:black ;">LOG OUT</a> 
         </form>
       </div>
     </div>
