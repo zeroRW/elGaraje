@@ -12,83 +12,69 @@
         {% endif %}
       {% endwith %}
 
-<div class="contenedor">
-    <div class="col-md-5 mt-3">
-        <div class="card">
-            <div class="cardbody">
+<div class="cuerpo">
+  <div class="container">
+    <div class="products">
 
-                <div class="padre">
-                    <h3><font color = "EE2912"><strong>Bronze Car</strong></font></h3>
-                    <img src="{{url_for ('static', filename = './img/dia.jpg')}}" width="170" height="150" />
-                    <h1><i>Vigencia x hora</i></h1>
-                    <h1>$25 MXN</h1>
+        <div class="product">
+            <div class="image">
+                <img src="{{url_for ('static', filename = './img/medallaOro.png')}}" alt="">
+            </div>
+            <div class="namePrice">
+                <center>
+                <h3>Gold Card</h3>
+                <span>$700 MXN</span>
+                    <p>Vigencia 1 semana</p>
+                        <a href="/insertMem/{{session.id}}/nivel2" class="btn btn-outline-danger">Adquirir Membresia</a>
+                </center>
+
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="image">
+                <img src="{{url_for ('static', filename = './img/medallaPlata.png')}}" alt="">
+            </div>
+            <div class="namePrice">
+                <center>
+                <h3>Plata Card</h3>
+                <span>$250 MXN</span>
+                    <p>Vigencia 1 dia</p>
+                        <a href="/insertMem/{{session.id}}/nivel1" class="btn btn-outline-danger">Adquirir Membresia</a>
+                </center>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="image">
+                <img src="{{url_for ('static', filename = './img/medallaBronce.png')}}" alt="">
+            </div>
+            <div class="namePrice">
+                <center>
+                <h3>Bronce Card</h3>
+                <span>$25 MXN</span>
+                    <p>Vigencia x hora</p>
                     <a href="/insertMem/{{session.id}}/Visitante" class="btn btn-outline-danger">Adquirir Membresia</a>
-                </div>
-
-
+                </center>
             </div>
         </div>
 
-    </div>
-</div>
-
-<div class="contenedor">
-    <div class="col-md-5 mt-3">
-        <div class="card">
-            <div class="cardbody">
-
-                <div class="padre">
-                    <h3><font color = "EE2912"><strong>Silver Car</strong></font></h3>
-                    <img src="{{url_for ('static', filename = './img/semana2.jpg')}}" width="400" height="150" />
-                    <h1><i>Vigencia 1 dia</i></h1>
-                    <h1>$250 MXN</h1>
-                    <a href="/insertMem/{{session.id}}/nivel1" class="btn btn-outline-danger">Adquirir Membresia</a>
-                </div>
-
-
+        <div class="product">
+            <div class="image">
+                <img src="{{url_for ('static', filename = './img/diamante.png')}}" alt="">
             </div>
-        </div>
-
-    </div>
-</div>
-<div class="contenedor">
-    <div class="col-md-5 mt-3">
-        <div class="card">
-            <div class="cardbody">
-
-                <div class="padre">
-                    <h3><font color = "EE2912"><strong>Gold Car</strong></font></h3>
-                    <img src="{{url_for ('static', filename = './img/mes.jpg')}}" width="400" height="180" />
-                    <h1><i>Vigencia 1 semana</i></h1>
-                    <h1>$700 MXN</h1>
-                    <a href="/insertMem/{{session.id}}/nivel2" class="btn btn-outline-danger">Adquirir Membresia</a>
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
-</div>
-<div class="contenedor">
-    <div class="col-md-5 mt-3">
-        <div class="card">
-            <div class="cardbody ">
-
-                <div class="padre">
-                    <h3><font color = "EE2912"><strong>Diamond Car</strong></font></h3>
-                    <img src="{{url_for ('static', filename = './img/año.jpg')}}" width="400" height="180" />
-                    <h1><i>Vigencia 1 mes</i></h1>
-                    <h1>$2,800 MXN</h1>
+            <div class="namePrice">
+                <center>
+                <h3>Diamante Card</h3>
+                <span>$2,800 MXN</span>
+                    <p>Vigencia 1 mes</p>
                     <a href="/insertMem/{{session.id}}/nivel3" class="btn btn-outline-danger">Adquirir Membresia</a>
-                </div>
-
-
+                </center>
             </div>
         </div>
-
+        
     </div>
 </div>
-
+</div>
 
 {%endblock%}

@@ -1,66 +1,69 @@
 {%extends 'plantillaAdmin.html' %}
 {%block body%}
 
-  <div class="col-md-7 container mb-0 ">
-    <div class="display-6 mt-3 mb-3 text-left ">Consulta de vehículos</div>
 
-    {% with mensaje = get_flashed_messages()%}
-    {% if mensaje %}
-       {% for msj in mensaje %}
-       <div class="alert alert-warning alert-dismissible fade show" role="alert">
-          <strong>{{msj}}</strong> 
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-       {% endfor %}
-    {% endif %}
-    {% endwith %}
 
-    <form method="POST">
-        <table class="table table-bordered border-dark">
-                <thead class="table-secondary ">
-            
-                    <tr>
-                        <td>Nombre</td>
-                        <td>Apeliidos</td>
-                        <td>Modelo</td>
-                        <td>Num._Licencia</td>
-                        <td>Tipo_de_Auto</td>
-                        <td>Establecimiento</td>
-                        <td>Placas</td>
-                        <td>Color</td>
-                        <td>Caracteristicas</td>
-            
-                    </tr>
-            
-                </thead>
-            
-                <tbody>
-                {%for veh in vehiculos%}
-                <tr class="table-light">
-                    <td>{{ veh.2 }}</td>
-                    <td>{{ veh.3 }}</td>
-                    <td>{{ veh.4 }}</td>
-                    <td>{{ veh.5 }}</td>
-                    <td>{{ veh.6 }}</td>
-                    <td>{{ veh.7 }}</td>
-                    <td>{{ veh.8 }}</td>
-                    <td>{{ veh.9 }}</td>
-                    <td>{{ veh.10 }}</td>
-                    <td>
-                        <a href="/editar/{{veh.0}}" class="btn btn-outline-primary">Editar</a>
-                        <a href="/eliminar/{{veh.0}}" class="btn btn-outline-danger">Borrar</a>
-                    </td>
-                </tr>
-                {%endfor%}
-            
-            </tbody>
-            
-            </table>
-    </form>
+<div class="container">
+    <div class="card card-body">
 
-    
+        <div class="display-6 mt-3 mb-3 text-left ">Consulta de vehículos</div>
 
+        {% with mensaje = get_flashed_messages()%}
+            {% if mensaje %}
+            {% for msj in mensaje %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{msj}}</strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        
+        <form action="POST">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-light">
+                            <thead>
+                            <tr>
+                                <td scope="col">Nombre</td>
+                                <td scope="col">Apeliidos</td>
+                                <td scope="col">Modelo</td>
+                                <td scope="col">Num._Licencia</td>
+                                <td scope="col">Tipo_de_Auto</td>
+                                <td scope="col">Establecimiento</td>
+                                <td scope="col">Placas</td>
+                                <td scope="col">Color</td>
+                                <td scope="col">Caracteristicas</td>
+                                <td scope="col">Opciones</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {%for veh in vehiculos%}
+                                    <tr>
+                                        <td>{{ veh.2 }}</td>
+                                        <td>{{ veh.3 }}</td>
+                                        <td>{{ veh.4 }}</td>
+                                        <td>{{ veh.5 }}</td>
+                                        <td>{{ veh.6 }}</td>
+                                        <td>{{ veh.7 }}</td>
+                                        <td>{{ veh.8 }}</td>
+                                        <td>{{ veh.9 }}</td>
+                                        <td>{{ veh.10 }}</td>
+                                        <td>
+                                            <a href="/editar/{{veh.0}}" class="btn btn-outline-primary">Editar</a>
+                                            <a href="/eliminar/{{veh.0}}" class="btn btn-outline-danger">Borrar</a>
+                                        </td>
+                                    </tr>
+                                {%endfor%}
+                            </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </form>  
+    </div>
 </div>
 
-</div>  
+
+
 {%endblock%}

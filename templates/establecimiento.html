@@ -2,63 +2,59 @@
 {%block body%}
 
 
-<div class="contenedor">
-    <div class="col-md-6 mt-3">
-        <div class="card">
-            <div class="cardbody">
-
-                <div class="padre">
-                    <h5>Plaza Puerta La Victoria</h5>
-                    <img src="{{url_for ('static', filename = './img/autos7.jpg')}}" width="470" height="280" />
-                    <h5>Av. Constituyentes Ote. 40 - A, zona dos extendida, Villas del Sol, 76046 Santiago de Querétaro,
-                        Qro.</h5>
-
-                </div>
-
-
-            </div>
-        </div>
-
+<article class="blog-post">
+    <div class="blog-post__img">
+        <img src="{{url_for ('static', filename = './img/autos7.jpg')}}" width="470" height="280" />
     </div>
-</div>
-
-<div class="contenedor">
-    <div class="col-md-6 mt-3">
-        <div class="card">
-            <div class="cardbody">
-
-                <div class="padre">
-                    <h5>Paseo Queretaro</h5>
-                    <img src="{{url_for ('static', filename = './img/autos3.jpg')}}" width="450" height="300" />
-                    <h5>Anillo Vial Fray Junípero Serra 7901, La Purísima, 76146 Santiago de Querétaro, Qro.</h5>
-
-                </div>
-
-
-            </div>
+    <div class="blog-post__info">
+        <div class="blog-post__date">
+            <span>Martes</span>
+            <span>21/02/2023</span>
         </div>
-
+        <h2 class="blog-post__title">Plaza la victoria</h2>
+        <p>Av. Constituyentes Ote. 40 - A, zona dos extendida, Villas del Sol, 76046 Santiago de Querétaro,
+            Qro.</p>
+        <a href="">
+            <button type="button" class="btn btn-primary btn-lg">Ir al estaclecimiento</button>
+        </a>
     </div>
-</div>
+</article>
 
-<div class="contenedor">
-    <div class="col-md-6 mt-3">
-        <div class="card">
-            <div class="cardbody ">
-
-                <div class="padre">
-                    <h5>Milenio III</h5>
-                    <img src="{{url_for ('static', filename = './img/autos5.jpg')}}" width="450" height="280" />
-                    <h5>Camino Real de Carretas # 386 Col, Milenio III, 76060 Santiago de Querétaro, Qro.</h5>
-                </div>
-
-
-            </div>
+<article class="blog-post">
+    <div class="blog-post__img">
+        <img src="{{url_for ('static', filename = './img/autos3.jpg')}}" width="470" height="280" />
+    </div>
+    <div class="blog-post__info">
+        <div class="blog-post__date">
+            <span>Martes</span>
+            <span>21/02/2023</span>
         </div>
-
+        <h2 class="blog-post__title">Paseo Queretaro</h2>
+        <p>Anillo Vial Fray Junípero Serra 7901, La Purísima, 76146 Santiago de Querétaro, Qro.</p>
+        <a href="">
+            <button type="button" class="btn btn-primary btn-lg">Ir al estaclecimiento</button>
+        </a>
     </div>
-</div>
+</article>
 
+<article class="blog-post">
+    <div class="blog-post__img">
+        <img src="{{url_for ('static', filename = './img/autos5.jpg')}}" width="470" height="280" />
+    </div>
+    <div class="blog-post__info">
+        <div class="blog-post__date">
+            <span>Martes</span>
+            <span>21/02/2023</span>
+        </div>
+        <h2 class="blog-post__title">Milenio III</h2>
+        <p>Camino Real de Carretas # 386 Col, Milenio III, 76060 Santiago de Querétaro, Qro.</p>
+        <a href="">
+            <button type="button" class="btn btn-primary btn-lg">Ir al estaclecimiento</button>
+        </a>
+    </div>
+</article>
+
+<br>
 
 
 {%endblock%}

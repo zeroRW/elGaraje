@@ -15,31 +15,29 @@
        <nav class="navbar navbar-expand-lg shadow p-3 mb-5 bg-body rounded" style="background-color:cornflowerblue ;">
         <div class="container-fluid ">
         
-            <p class=" fst-italic mt-1 mb-0">
-              <a class="h1 navbar-brand " href="#">EL GARAJE ADMINISTRADOR</a>
+            <p class="fst-italic mt-1 mb-0">
+              <h4 class="h1 navbar-brand ">EL GARAJE ADMINISTRADOR</h4>
             </p>
           
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/inicio/{{session.id}}" style="color:black ;">Inicio</a>
-                  </li>
+            <ul class="navbar-nav me-auto mb-2 ">
               <li class="nav-item">
-                <a class="nav-link active" href="/consultaVehiculos/{{session.id}}" style="color:black ;">Consultar vehiculos</a>
+                <a class="nav-link" href="/registrar" >Registrar usuario admin</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/consultausu/{{session.id}}" style="color:black ;">Consultar usuario</a>
+                <a class="nav-link active" href="/consultaVehiculos/{{session.id}}" >Consultar vehiculos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/registrar" style="color:black ;">Registrar usuario admin</a>
+                <a class="nav-link" href="/consultausu/{{session.id}}" >Consultar usuario</a>
               </li>
             </ul>
             <form class="d-flex">
               <p class="mt-2" style="color:black ;">Usuario: {{session.usuario}}</p>
-              <a href="/logout" class="btn btn-outline-black" style="color:black ;">LOG OUT</a>
+              <br>
+              <a href="/logout" class="btn" style="color:black ;">LOG OUT</a>
             </form>
           </div>
         </div>

@@ -54,7 +54,7 @@ def login():
             session['pas'] = account[0][3]
             print(usuario)
             if(account[0][5] == 2):
-                return render_template('menuAdmin.html')
+                return render_template('CrearUsuAdmin.html')
             else:
                 return render_template('index.html')                       
         else:
@@ -273,8 +273,8 @@ def crearusuAdmin():
 @app.route('/actualizarMicuenta/<string:id>', methods = ['POST'])
 def actualizarMicuenta(id):
     if request.method=='POST':
-        mi1 = request.form['Miemail']
-        mi2 = request.form['Miname']
+        mi1 = request.form['Miname']
+        mi2 = request.form['Miemail']
         mi3 = request.form['Mipass']
         mi4 = request.form['Mipass2']
         if mi3 == mi4:

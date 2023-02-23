@@ -3,6 +3,7 @@
 
 <div class="container">
     <div class="card card-body">
+      
       {% with mensaje = get_flashed_messages() %}
         {% if mensaje %}
         {% for msj in mensaje %}
@@ -21,7 +22,7 @@
                 <input type="submit" value="Buscar">
               <div class="row">
                     <div class="col">
-
+                        <br>
                         <table class="table table-light">
                           <thead>
                             <tr>

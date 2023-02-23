@@ -27,27 +27,28 @@
         <form class="form-signin" action="/actualizarMicuenta/{{usu.0}}" method="POST">
            
             <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Nombre Usuario</label>
                 <div class="col-sm-10">
-                  <input type="text" name="Miemail" readonly class="form-control-plaintext" id="staticEmail" value="{{usu.1}}" required>
+                  <input type="text" name="Miname" class="form-control-plaintext" id="inputPassword" value="{{usu.1}}" required>
                 </div>
               </div>
               <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Nombre de usuario</label>
+                <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
                 <div class="col-sm-10">
-                  <input type="text" name="Miname" class="form-control" id="inputPassword" value="{{usu.2}}" required>
+                  <input type="email" name="Miemail" class="form-control" id="staticEmail" value="{{usu.2}}" required>
                 </div>
               </div>
               <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <label for="inputPassword1" class="col-sm-2 col-form-label">Password</label>
                 <div class="col-sm-10">
-                  <input type="text" name="Mipass" class="form-control" id="inputPassword" value="{{usu.3}}" required>
+                  <input type="password" name="Mipass" class="form-control" id="inputPassword1" value="{{usu.3}}" required>
                 </div>
               </div>
               <div class="mb-3 row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Confirmar Password</label>
                 <div class="col-sm-10">
-                  <input type="text" name="Mipass2" class="form-control" id="inputPassword" value="{{usu.4}}" required>
+                  <input type="password" name="Mipass2" class="form-control" id="inputPassword2" value="{{usu.4}}" required>
+                  <input type="checkbox" onclick="showPass()">Ver contraseña
                 </div>
               </div>
               <div class="d-grid">
@@ -90,4 +91,21 @@
   </div>
 </div> 
 
+<script>
+  function showPass(){
+    var pass = document.getElementById('inputPassword1');
+    var pass2 = document.getElementById('inputPassword2');
+
+    if(pass.type=='password'&&pass2.type=='password'){
+          pass.type='text';
+          pass2.type='text';
+    }
+    else{
+          pass.type='password';
+          pass2.type='password';
+    }
+  }
+
+
+</script>
 {%endblock%}
