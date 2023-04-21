@@ -3,6 +3,8 @@ from flask import Flask, render_template, request, redirect, flash, url_for, ses
 from flask_mysqldb import MySQL
 from flask_session import Session
 
+
+
 #inicializar el framework
 app = Flask(__name__)
 
@@ -33,6 +35,15 @@ class user1():
         self.rol = rol
 
 #RUTAS GENERALES
+@app.route('/map')
+def show_map():
+    lat = 20.58608  # coordenadas de Ciudad de México
+    lon = -100.38049
+    zoom_start = 10  # nivel de zoom
+    my_map = folium.Map(location=[lat, lon], zoom_start=zoom_start)
+    return my_map._repr_html_()
+
+
 @app.route('/')
 def log():
     return render_template('login.html')

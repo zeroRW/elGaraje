@@ -1,60 +1,54 @@
 {% extends 'plantilla.html'%}
 {%block body%}
 
-
-<article class="blog-post">
-    <div class="blog-post__img">
-        <img src="{{url_for ('static', filename = './img/autos7.jpg')}}" width="470" height="280" />
-    </div>
-    <div class="blog-post__info">
-        <div class="blog-post__date">
-            <span>Martes</span>
-            <span>21/02/2023</span>
+<center>
+        <article class="blog-post">
+        <div class="blog-post__img">
+            <img src="{{url_for ('static', filename = './img/autos7.jpg')}}" width="480" height="280" />
         </div>
-        <h2 class="blog-post__title">Plaza la victoria</h2>
-        <p>Av. Constituyentes Ote. 40 - A, zona dos extendida, Villas del Sol, 76046 Santiago de Querétaro,
-            Qro.</p>
-        <a href="https://goo.gl/maps/r5xwc9LQ4E25V7mc6" target="_blank">
-            <button type="button" class="btn btn-primary btn-lg">Ir al establecimiento</button>
-        </a>
-    </div>
-</article>
+        <div class="blog-post__info">
 
-<article class="blog-post">
-    <div class="blog-post__img">
-        <img src="{{url_for ('static', filename = './img/autos3.jpg')}}" width="470" height="280" />
-    </div>
-    <div class="blog-post__info">
-        <div class="blog-post__date">
-            <span>Martes</span>
-            <span>21/02/2023</span>
+            <h2 class="blog-post__title">Plaza la victoria</h2>
+            <p>Av. Constituyentes Ote. 40 - A, zona dos extendida, Villas del Sol, 76046 Santiago de Querétaro,
+                Qro.</p>
+                <center>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.047590996765!2d-100.38394628807706!3d20.586114002753003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d345046a5b5135%3A0xda0dbc882ab4a591!2sPlaza%20Puerta%20La%20Victoria!5e0!3m2!1ses-419!2smx!4v1682056930259!5m2!1ses-419!2smx" width="600" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </center>
         </div>
-        <h2 class="blog-post__title">Paseo Queretaro</h2>
-        <p>Anillo Vial Fray Junípero Serra 7901, La Purísima, 76146 Santiago de Querétaro, Qro.</p>
-        <a href="https://goo.gl/maps/py4JvKA5eejoNhGK9" target="_blank">
-            <button type="button" class="btn btn-primary btn-lg">Ir al establecimiento</button>
-        </a>
-    </div>
-</article>
+    </article>
 
-<article class="blog-post">
-    <div class="blog-post__img">
-        <img src="{{url_for ('static', filename = './img/autos5.jpg')}}" width="470" height="280" />
-    </div>
-    <div class="blog-post__info">
-        <div class="blog-post__date">
-            <span>Martes</span>
-            <span>21/02/2023</span>
+    <article class="blog-post">
+        <div class="blog-post__img">
+            <img src="{{url_for ('static', filename = './img/autos3.jpg')}}" width="470" height="280" />
         </div>
-        <h2 class="blog-post__title">Milenio III</h2>
-        <p>Camino Real de Carretas # 386 Col, Milenio III, 76060 Santiago de Querétaro, Qro.</p>
-        <a href="https://goo.gl/maps/MM7rr3y1ptKPCpKX9" target="_blank">
-            <button type="button" class="btn btn-primary btn-lg">Ir al establecimiento</button>
-        </a>
-    </div>
-</article>
+        <div class="blog-post__info">
 
-<br>
+            <h2 class="blog-post__title">Paseo Queretaro</h2>
+            <p>Anillo Vial Fray Junípero Serra 7901, La Purísima, 76146 Santiago de Querétaro, Qro.</p>
+
+            <!-- <div id="map"></div> -->
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.933849073788!2d-100.3584678880764!3d20.631553001220965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b7c9e1f5331%3A0x596942ca8070331e!2sPaseo%20Quer%C3%A9taro!5e0!3m2!1ses-419!2smx!4v1682057060063!5m2!1ses-419!2smx" width="600" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </article>
+
+    <article class="blog-post">
+        <div class="blog-post__img">
+            <img src="{{url_for ('static', filename = './img/autos5.jpg')}}" width="470" height="280" />
+        </div>
+        <div class="blog-post__info">
+
+            <h2 class="blog-post__title">Milenio III</h2>
+            <p>Camino Real de Carretas # 386 Col, Milenio III, 76060 Santiago de Querétaro, Qro.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29876.707449499358!2d-100.41943122311402!3d20.604858645498485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b90540b86d5%3A0x8865816ab4b3c5d1!2sPlaza%20Milenio%20III!5e0!3m2!1ses-419!2smx!4v1682057157103!5m2!1ses-419!2smx" width="600" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </article>
+
+    <br>
+</center>
+
+
 
 
 {%endblock%}

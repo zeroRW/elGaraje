@@ -6,6 +6,11 @@ body{
 
 /*Color span servicios*/
 
+#map{
+    width: 20%;
+    height: 30vh;
+}
+
 #coloSpa span{
     color: black;
 }
